@@ -18,7 +18,14 @@ $(function () {
   //HEADER SLIDER END
   //SMOOTH SCROLL START
 
-  $(".header__nav-list a, .footer__row-item a").on("click", function (e) {
+  $(".header__nav-create").on("click", function (e) {
+    e.preventDefault()
+    var id = $(this).attr('href'),
+      top = $(id).offset().top - 50
+    $('body,html').animate({ scrollTop: top }, 800)
+  });
+
+  $(".header__nav-link, .footer__row-item a, .btn, .btn--black").on("click", function (e) {
     e.preventDefault()
     var id = $(this).attr('href'),
       top = $(id).offset().top - 50

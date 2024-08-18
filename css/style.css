@@ -111,6 +111,16 @@ body {
   font-weight: 700;
 }
 
+.header__nav-create {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #fff;
+}
+.header__nav-create span {
+  font-weight: 700;
+}
+
 .header__phone-icon {
   margin-top: 3px;
   margin-right: 8px;
@@ -388,6 +398,15 @@ body {
   right: 15px;
 }
 
+.advantages .container {
+  max-width: 1440px;
+  padding: 0px;
+}
+
+.container--second {
+  max-width: 1160px !important;
+}
+
 .advantages__inner {
   padding-top: 76px;
   padding-bottom: 165px;
@@ -399,7 +418,7 @@ body {
   background-image: url("../images/advantages/bg.png");
   background-repeat: no-repeat;
   width: 1440px;
-  height: 2077px;
+  height: 2048px;
   display: block;
   position: absolute;
   left: 50%;
@@ -407,6 +426,7 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: -1;
+  border-radius: 30px;
 }
 
 .advantages__title {
@@ -443,7 +463,7 @@ body {
   font-size: 20px;
   line-height: 125%;
   color: #e8e6e6;
-  max-width: 240px;
+  max-width: 270px;
 }
 .advantages__item-text span {
   font-weight: 700;
@@ -465,7 +485,7 @@ body {
   height: 0px;
   display: block;
   position: absolute;
-  left: -140px;
+  left: 0px;
   top: -35px;
 }
 .advantages__carousel::after {
@@ -475,7 +495,7 @@ body {
   height: 0px;
   display: block;
   position: absolute;
-  left: -140px;
+  left: 0px;
   bottom: -35px;
 }
 
@@ -548,14 +568,21 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  width: 100vw;
+  max-width: 240px;
+  min-width: 150px;
 }
 
 .gallery__link-icon {
-  margin-left: 20px;
+  position: absolute;
+  right: 0px;
 }
 
 .gallery__btn-box {
-  margin-top: 105px;
+  max-width: 680px;
+  margin: 0px auto;
+  margin-top: 60px;
 }
 
 .trust__inner {
@@ -637,6 +664,7 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   display: block;
   margin-left: 78px;
+  margin-top: -15px;
 }
 
 .footer__contacts-title {
@@ -672,6 +700,18 @@ body {
 }
 .footer__contacts-item:last-child {
   margin-bottom: 0px;
+}
+.footer__contacts-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .footer__contacts-link {

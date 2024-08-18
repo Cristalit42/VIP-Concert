@@ -97,9 +97,7 @@ body {
   min-width: 300px;
 }
 
-.header__nav-item {
-  
-}
+.header__nav-item {}
 
 .header__nav-link {
   @include text-style (400, 16px, 125%, #fff);
@@ -108,6 +106,15 @@ body {
     font-weight: 700;
   }
 }
+
+.header__nav-create{
+  @include text-style (400, 16px, 125%, #fff);
+
+  span {
+    font-weight: 700;
+  }
+}
+
 
 .header__logo {}
 
@@ -378,7 +385,16 @@ body {
 //create end
 //advantages start
 
-.advantages {}
+.advantages {
+  .container {
+    max-width: 1440px;
+    padding: 0px;
+  }
+}
+
+.container--second {
+  max-width: 1160px !important;
+}
 
 .advantages__inner {
   padding-top: 76px;
@@ -391,13 +407,14 @@ body {
     background-image: url("../images/advantages/bg.png");
     background-repeat: no-repeat;
     width: 1440px;
-    height: 2077px;
+    height: 2048px;
     display: block;
     position: absolute;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
     z-index: -1;
+    border-radius: 30px;
   }
 }
 
@@ -432,7 +449,7 @@ body {
 
 .advantages__item-text {
   @include text-style (400, 20px, 125%, #e8e6e6);
-  max-width: 240px;
+  max-width: 270px;
 
   span {
     font-weight: 700;
@@ -457,7 +474,7 @@ body {
     height: 0px;
     display: block;
     position: absolute;
-    left: -140px;
+    left: 0px;
     top: -35px;
   }
 
@@ -468,7 +485,7 @@ body {
     height: 0px;
     display: block;
     position: absolute;
-    left: -140px;
+    left: 0px;
     bottom: -35px;
   }
 
@@ -538,16 +555,21 @@ body {
   display: flex;
   align-items: end;
   justify-content: space-between;
-
-
+  position: relative;
+  width: 100vw;
+  max-width: 240px;
+  min-width: 150px;
 }
 
 .gallery__link-icon {
-  margin-left: 20px;
+  position: absolute;
+right: 0px;
 }
 
 .gallery__btn-box {
-  margin-top: 105px;
+  max-width: 680px;
+  margin: 0px auto;
+  margin-top: 60px;
 }
 
 //gallery end
@@ -629,6 +651,7 @@ body {
     background-color: rgba(255, 255, 255, 0.3);
     display: block;
     margin-left: 78px;
+    margin-top: -15px;
   }
 }
 
@@ -659,6 +682,12 @@ body {
 
   &:last-child {
     margin-bottom: 0px;
+  }
+
+  a{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 }
 
@@ -715,7 +744,7 @@ body {
   align-items: center;
 }
 
-.footer__row-icon{
+.footer__row-icon {
   margin-left: 8px;
 }
 
