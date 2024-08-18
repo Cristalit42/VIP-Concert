@@ -1,0 +1,30 @@
+$(function () {
+
+  //HEADER SLIDER START
+  $('.advantages__carousel').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 0,
+    infinite: true,
+    cssEase: 'linear',
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    variableWidth: true
+  });
+
+  //HEADER SLIDER END
+  //SMOOTH SCROLL START
+
+  $(".header__nav-list a, .footer__row-item a").on("click", function (e) {
+    e.preventDefault()
+    var id = $(this).attr('href'),
+      top = $(id).offset().top - 50
+    $('body,html').animate({ scrollTop: top }, 1500)
+  });
+
+
+  //SMOOTH SCROLL END
+});
