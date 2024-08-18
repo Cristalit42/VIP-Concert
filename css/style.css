@@ -29,20 +29,36 @@ body {
   background: linear-gradient(157deg, #086db6 0%, #449ad8 100%);
   border-radius: 110px;
   width: 100%;
+  position: relative;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.btn::before {
+.btn:hover::after {
+  opacity: 1;
+}
+.btn:hover::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.btn::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ff7e5f; /* Целевой цвет */
+  background-color: #0E67A9; /* Целевой цвет */
   opacity: 0;
-  -webkit-transition: opacity 2s ease;
-  transition: opacity 2s ease; /* Плавный переход для непрозрачности */
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Плавный переход для непрозрачности */
+  border-radius: 110px;
+}
+.btn::before {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn span {
+  position: relative;
   z-index: 1;
 }
 
@@ -412,6 +428,7 @@ body {
   display: block;
   position: absolute;
   right: 15px;
+  z-index: 1;
 }
 
 .advantages .container {
@@ -482,7 +499,7 @@ body {
   max-width: 270px;
 }
 .advantages__item-text span {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .advantages__btn-box {
