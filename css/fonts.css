@@ -20,6 +20,16 @@
 }
 @font-face {
   font-family: "Onest";
+  font-weight: 600;
+  font-style: normal;
+  src:
+    url("../fonts/onest-semiBold.eot") format("eot"),
+    url("../fonts/onest-semiBold.woff") format("woff"),
+    url("../fonts/onest-semiBold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Onest";
   font-weight: 700;
   font-style: normal;
   src:
