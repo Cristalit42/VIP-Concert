@@ -39,11 +39,13 @@ body {
 .btn--black {
   @include text-style (400, 16px, 110%, #fff);
   border-radius: 110px;
-  backdrop-filter: blur(11px);
-  background: linear-gradient(356deg, rgba(26, 25, 25, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), linear-gradient(166deg, rgba(13, 20, 27, 0) 0%, #0d141b 100%), linear-gradient(222deg, rgba(9, 130, 240, 0.4) 0%, rgba(0, 148, 255, 0.4) 100%);
   padding: 35px;
   text-align: center;
   width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  background-image: url("../images/icons/btn-bg.png");
+  // background: linear-gradient(356deg, rgba(26, 25, 25, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), linear-gradient(166deg, rgba(13, 20, 27, 0) 0%, #0d141b 100%), linear-gradient(222deg, rgba(9, 130, 240, 0.4) 0%, rgba(0, 148, 255, 0.4) 100%);
+  // backdrop-filter: blur(11px);
 }
 
 .title {
@@ -102,18 +104,30 @@ body {
 
 .header__nav-link {
   @include text-style (400, 16px, 125%, #fff);
+  transition: all .3s;
 
   span {
+    font-weight: 700;
+  }
+
+  &:hover {
     font-weight: 700;
   }
 }
 
-.header__nav-create{
+.header__nav-create {
   @include text-style (400, 16px, 125%, #fff);
+  transition: all .3s;
 
   span {
     font-weight: 700;
   }
+
+  &:hover {
+    font-weight: 700;
+  }
+
+
 }
 
 
@@ -450,11 +464,11 @@ body {
 }
 
 .advantages__item-text {
-  @include text-style (400, 20px, 125%, #e8e6e6);
+  @include text-style (300, 20px, 125%, #e8e6e6);
   max-width: 270px;
 
   span {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
@@ -565,7 +579,7 @@ body {
 
 .gallery__link-icon {
   position: absolute;
-right: 0px;
+  right: 0px;
 }
 
 .gallery__btn-box {
@@ -686,7 +700,7 @@ right: 0px;
     margin-bottom: 0px;
   }
 
-  a{
+  a {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -698,7 +712,18 @@ right: 0px;
   margin-top: 11px;
 }
 
-.footer__social-item {}
+.footer__social-item {
+  transition: all .3s;
+
+  &:hover{
+    img{
+      fill: #DEE0E3;
+    }
+    
+  }
+
+
+}
 
 
 .footer__social-link {
@@ -706,6 +731,14 @@ right: 0px;
 
   &:last-child {
     margin-right: 0px;
+  }
+
+  &:hover{
+    svg{
+      path{
+        fill: #DEE0E3;
+      }
+    }
   }
 }
 
@@ -744,6 +777,11 @@ right: 0px;
 .footer__row-link {
   display: flex;
   align-items: center;
+  transition: all .3s;
+
+  &:hover {
+    font-weight: 700;
+  }
 }
 
 .footer__row-icon {
