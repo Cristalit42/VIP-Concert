@@ -73,6 +73,11 @@ body {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.17);
   background-image: url("../images/icons/btn-bg.png");
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn--black:hover {
+  background-image: url("/images/icons/btn-bg-hover.png");
 }
 
 .title {
@@ -80,8 +85,8 @@ body {
   font-size: 46px;
   line-height: 154%;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#999), color-stop(50.86%, #fff), to(#999));
-  background: linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50%, #fff), to(#B9B9B9));
+  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50%, #B9B9B9 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -334,8 +339,8 @@ body {
   font-size: 26px;
   line-height: 127%;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#999), color-stop(50.86%, #fff), to(#999));
-  background: linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#BEBEBE), color-stop(50.86%, #fff), to(#C2C2C2));
+  background: linear-gradient(90deg, #BEBEBE 0%, #fff 50.86%, #C2C2C2 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -343,11 +348,23 @@ body {
   margin-bottom: 4px;
 }
 
+.header__card-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: normal;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .create__inner {
   padding-bottom: 150px;
 }
 
 .create__title {
+  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50.86%, #fff), to(#B9B9B9));
+  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 40px;
 }
 
@@ -360,6 +377,9 @@ body {
 }
 
 .create__content-item:nth-child(2) .create__item-title {
+  margin-bottom: 12px;
+}
+.create__content-item:nth-child(3) .create__item-title {
   margin-bottom: 12px;
 }
 
@@ -388,11 +408,12 @@ body {
 }
 
 .create__item-title {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 25px;
   line-height: 125%;
   color: #fff;
-  background: linear-gradient(91deg, #999 0%, #fff 50.86%, #999 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#BEBEBE), color-stop(50.86%, #fff), to(#C2C2C2));
+  background: linear-gradient(90deg, #BEBEBE 0%, #fff 50.86%, #C2C2C2 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -404,6 +425,9 @@ body {
   font-size: 16px;
   line-height: 125%;
   color: rgba(255, 255, 255, 0.7);
+  width: 100vw;
+  max-width: 316px;
+  min-width: 200px;
 }
 
 .create__btn-box {
@@ -474,6 +498,11 @@ body {
 .advantages__title {
   max-width: 700px;
   margin-bottom: 36px;
+  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50.86%, #fff), to(#CCCCCC));
+  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #CCCCCC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .advantages__content {
@@ -549,6 +578,11 @@ body {
 
 .gallery__title {
   margin-bottom: 56px;
+  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50.86%, #fff), to(#B9B9B9));
+  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .gallery__content {
@@ -615,6 +649,14 @@ body {
   max-width: 240px;
   min-width: 150px;
 }
+.gallery__item-link .gallery__link-icon {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.gallery__item-link:hover .gallery__link-icon {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 
 .gallery__link-icon {
   position: absolute;
@@ -633,6 +675,11 @@ body {
 
 .trust__title {
   margin-bottom: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(#BEBEBE), color-stop(50.86%, #fff), to(#BCBCBC));
+  background: linear-gradient(90deg, #BEBEBE 0%, #fff 50.86%, #BCBCBC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .trust__content {
@@ -711,6 +758,11 @@ body {
 
 .footer__contacts-title {
   margin-bottom: 48px;
+  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50.86%, #fff), to(#B9B9B9));
+  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer__contacts-item {

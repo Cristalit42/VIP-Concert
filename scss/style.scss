@@ -44,13 +44,18 @@ body {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.17);
   background-image: url("../images/icons/btn-bg.png");
-  // background: linear-gradient(356deg, rgba(26, 25, 25, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), linear-gradient(166deg, rgba(13, 20, 27, 0) 0%, #0d141b 100%), linear-gradient(222deg, rgba(9, 130, 240, 0.4) 0%, rgba(0, 148, 255, 0.4) 100%);
-  // backdrop-filter: blur(11px);
+  transition: all .3s;
+
+  &:hover{
+    background-image: url("/images/icons/btn-bg-hover.png");
+  }
 }
 
 .title {
   @include text-style (700, 46px, 154%, #fff);
-  @include text-gradient(linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%));
+  // @include text-gradient(linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%));
+  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50%, #B9B9B9 100%));
+
   font-family: $sf;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -290,12 +295,15 @@ body {
 
 .header__card-title {
   @include text-style (700, 26px, 127%, #fff);
-  @include text-gradient(linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%));
+  @include text-gradient(linear-gradient(90deg, #BEBEBE 0%, #fff 50.86%, #C2C2C2 100%));
   font-family: $sf;
   margin-bottom: 4px;
 }
 
-.header__card-subtitle {}
+.header__card-subtitle {
+  @include text-style (500, 16px, normal, rgba(255, 255, 255, 0.7));
+
+}
 
 //header__bottom end
 //HEADER END
@@ -313,6 +321,7 @@ body {
 }
 
 .create__title {
+  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%));
   margin-bottom: 40px;
 }
 
@@ -330,7 +339,11 @@ body {
     .create__item-title {
       margin-bottom: 12px;
     }
-
+  }
+  &:nth-child(3) {
+    .create__item-title {
+      margin-bottom: 12px;
+    }
   }
 }
 
@@ -358,14 +371,17 @@ body {
 }
 
 .create__item-title {
-  @include text-style (700, 25px, 125%, #fff);
-  @include text-gradient(linear-gradient(91deg, #999 0%, #fff 50.86%, #999 100%));
-  margin-bottom: 24px;
+  @include text-style (600, 25px, 125%, #fff);
+  @include text-gradient(linear-gradient(90deg, #BEBEBE 0%, #fff 50.86%, #C2C2C2 100%));
+  margin-bottom: 24px; 
+  
 }
 
 .create__item-text {
   @include text-style (400, 16px, 125%, rgba(255, 255, 255, 0.7));
-
+  width: 100vw;
+  max-width: 316px;
+  min-width: 200px;
 }
 
 .create__btn-box {
@@ -437,6 +453,8 @@ body {
 .advantages__title {
   max-width: 700px;
   margin-bottom: 36px;
+  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #CCCCCC 100%));
+
 }
 
 .advantages__content {
@@ -527,6 +545,8 @@ body {
 
 .gallery__title {
   margin-bottom: 56px;
+  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%));
+
 }
 
 .gallery__content {
@@ -575,6 +595,18 @@ body {
   width: 100vw;
   max-width: 240px;
   min-width: 150px;
+
+
+  .gallery__link-icon{
+    transition: all .3s;
+  }
+
+  &:hover{
+
+    .gallery__link-icon{
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .gallery__link-icon {
@@ -599,6 +631,8 @@ body {
 
 .trust__title {
   margin-bottom: 40px;
+  @include text-gradient(linear-gradient(90deg, #BEBEBE 0%, #fff 50.86%, #BCBCBC 100%));
+
 }
 
 .trust__content {
@@ -675,6 +709,8 @@ body {
 
 .footer__contacts-title {
   margin-bottom: 48px;
+  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%));
+
 }
 
 .footer__contacts-list {}
