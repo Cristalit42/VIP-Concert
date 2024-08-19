@@ -27,7 +27,7 @@ body {
 }
 
 .btn {
-  @include text-style (400, 16px, 110%, #fff);
+  @include text-style (300, 16px, 110%, #fff);
   text-align: center;
   padding: 35px;
   background: linear-gradient(157deg, #086db6 0%, #449ad8 100%);
@@ -37,7 +37,7 @@ body {
 }
 
 .btn--black {
-  @include text-style (400, 16px, 110%, #fff);
+  @include text-style (300, 16px, 110%, #fff);
   border-radius: 110px;
   padding: 35px;
   text-align: center;
@@ -108,7 +108,7 @@ body {
 .header__nav-item {}
 
 .header__nav-link {
-  @include text-style (400, 16px, 125%, #fff);
+  @include text-style (300, 16px, 125%, #fff);
   transition: all .3s;
 
   span {
@@ -121,7 +121,7 @@ body {
 }
 
 .header__nav-create {
-  @include text-style (400, 16px, 125%, #fff);
+  @include text-style (300, 16px, 125%, #fff);
   transition: all .3s;
 
   span {
@@ -173,7 +173,7 @@ body {
 }
 
 .header__main-text {
-  @include text-style (400, 25px, 125%, #e8e6e6);
+  @include text-style (300, 25px, 125%, #e8e6e6);
   text-align: center;
   max-width: 590px;
   margin-bottom: 35px;
@@ -289,7 +289,7 @@ body {
 }
 
 .header__card-text {
-  @include text-style (400, 16px, 125%, rgba(255, 255, 255, 0.7));
+  @include text-style (300, 16px, 125%, rgba(255, 255, 255, 0.7));
   margin-bottom: 4px;
 }
 
@@ -378,7 +378,7 @@ body {
 }
 
 .create__item-text {
-  @include text-style (400, 16px, 125%, rgba(255, 255, 255, 0.7));
+  @include text-style (300, 16px, 125%, rgba(255, 255, 255, 0.7));
   width: 100vw;
   max-width: 316px;
   min-width: 200px;
@@ -716,7 +716,7 @@ body {
 .footer__contacts-list {}
 
 .footer__contacts-item {
-  @include text-style (400, 16px, normal, #c5c5c5);
+  @include text-style (300, 16px, normal, #c5c5c5);
   display: flex;
   flex-direction: column;
   align-items: start;
