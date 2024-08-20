@@ -1,6 +1,6 @@
 $(function () {
 
-  //HEADER SLIDER START
+  //CAROUSEL START
   $('.advantages__carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -15,7 +15,7 @@ $(function () {
     variableWidth: true
   });
 
-  //HEADER SLIDER END
+  //CAROUSEL END
   //SMOOTH SCROLL START
 
   $(".header__nav-create").on("click", function (e) {
@@ -34,4 +34,20 @@ $(function () {
 
 
   //SMOOTH SCROLL END
+  //GALLERY START
+
+  $(document).ready(function() {
+    $('[data-fancybox="gallery"]').fancybox({
+      Thumbs: {
+        autoStart: false, 
+        show: false 
+      },
+  
+      loop: true,
+    });
+    
+  });
+  
+
+  //GALLERY END
 });
