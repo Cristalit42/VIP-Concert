@@ -144,12 +144,27 @@ body {
   color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  position: relative;
 }
 .header__nav-link span {
   font-weight: 700;
 }
-.header__nav-link:hover {
-  font-weight: 700;
+.header__nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__nav-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .header__nav-create {
@@ -159,12 +174,27 @@ body {
   color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  position: relative;
 }
 .header__nav-create span {
   font-weight: 700;
 }
-.header__nav-create:hover {
-  font-weight: 700;
+.header__nav-create::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__nav-create:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .header__phone-icon {
@@ -865,6 +895,10 @@ body {
           justify-content: space-between;
 }
 
+.footer__row-item:nth-child(2) .footer__row-link::after {
+  display: none;
+}
+
 .footer__row-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -874,9 +908,24 @@ body {
           align-items: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  position: relative;
 }
-.footer__row-link:hover {
-  font-weight: 700;
+.footer__row-link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer__row-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .footer__row-icon {
