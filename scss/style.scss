@@ -583,6 +583,18 @@ body {
   display: none !important;
 }
 
+.gallery__modal {
+  display: none; /* Скрываем галереи по умолчанию */
+}
+
+[data-fancybox] {
+  display: block; /* Убедитесь, что ссылки отображаются */
+}
+
+.gallery__content-item a.active + .gallery__modal {
+  display: block; /* Показываем галерею, соответствующую активной карточке */
+}
+
 .gallery {}
 
 .gallery__inner {

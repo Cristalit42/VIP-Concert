@@ -35,19 +35,8 @@ $(function () {
 
   //SMOOTH SCROLL END
   //GALLERY START
+  
 
-  $(document).ready(function() {
-    $('[data-fancybox="gallery"]').fancybox({
-      Thumbs: {
-        autoStart: false, 
-        show: false 
-      },
-  
-      loop: true,
-    });
-    
-  });
-  
 
   //GALLERY END
 });
