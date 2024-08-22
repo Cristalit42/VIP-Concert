@@ -42,13 +42,33 @@ body {
   padding: 35px;
   text-align: center;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  background-image: url("../images/icons/btn-bg.png");
-  transition: all .3s;
+  white-space: nowrap;
+  position: relative;
 
+
+  &::before {
+    content: "";
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    background-image: url("../images/icons/btn-bg.svg");
+    background-size: cover;
+    transition: all .3s;
+    border-radius: 110px;
+    width: 100%;
+    height: 100vh;
+    max-height: 86px;
+    min-height: 43px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
 
   &:hover {
-    background-image: url("../images/icons/btn-bg-hover.png");
+    &::before {
+
+      background-image: url("../images/icons/btn-bg-hover.svg");
+    }
   }
 }
 
@@ -90,7 +110,6 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 40px;
-
 }
 
 .header__top-content {}
@@ -102,7 +121,8 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  max-width: 829px;
+  max-width: 838px;
+  padding: 0px 20px;
   min-width: 300px;
 }
 
@@ -183,7 +203,7 @@ body {
 
 .header__phone-icon {
   margin-top: 3px;
-  margin-right: 8px;
+  margin-right: 5px;
 }
 
 //header__top end
@@ -234,6 +254,10 @@ body {
 
 .header__main-btn {
   margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 
 .header__main-btn--black {}
@@ -584,15 +608,18 @@ body {
 }
 
 .gallery__modal {
-  display: none; /* Скрываем галереи по умолчанию */
+  display: none;
+  /* Скрываем галереи по умолчанию */
 }
 
 [data-fancybox] {
-  display: block; /* Убедитесь, что ссылки отображаются */
+  display: block;
+  /* Убедитесь, что ссылки отображаются */
 }
 
-.gallery__content-item a.active + .gallery__modal {
-  display: block; /* Показываем галерею, соответствующую активной карточке */
+.gallery__content-item a.active+.gallery__modal {
+  display: block;
+  /* Показываем галерею, соответствующую активной карточке */
 }
 
 .gallery {}
@@ -938,3 +965,94 @@ body {
 }
 
 //FOOTER END
+//RESPONSIVE START
+//900px start
+@media (max-width:900px) {
+  .header__main-title {
+    font-size: 46px;
+  }
+
+  .header__main-text {
+    font-size: 21px;
+  }
+
+  //900px end
+
+}
+
+//700px start
+@media (max-width:700px) {
+  .header__main-title {
+    font-size: 26px;
+    max-width: 370px;
+  }
+
+  .header__main-text {
+    font-size: 16px;
+    max-width: 380px;
+  }
+
+  .header__main-btn {
+    padding: 20px;
+    max-width: 210px;
+  }
+
+  .btn--black {
+    &::before {
+      height: 58px;
+    }
+  }
+
+  .header__main-btns {
+    padding: 0px 20px;
+  }
+
+  .header__main-btn {
+    &:first-child {
+      margin-right: 6px;
+    }
+  }
+
+  //700px end
+}
+
+//475px start
+@media (max-width: 475px) {
+  .header__main-title {
+    font-size: 18px;
+  }
+
+  .header__main-text {
+    font-size: 12px;
+    max-width: 290px;
+  }
+
+
+  .header {
+    &::before {
+      content: "";
+      background-image: url("../images/hero-mob-bg.png");
+    }
+  }
+
+  .btn,
+  .btn--black {
+    font-size: 11px;
+    padding: 17px 33px;
+  }
+
+
+
+  .btn--black {
+    padding: 17px;
+
+    &::before {
+      height: 46px;
+    }
+  }
+
+  //475px end
+}
+
+
+//RESPONSIVE END
