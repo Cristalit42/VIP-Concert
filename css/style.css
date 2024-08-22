@@ -47,7 +47,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0E67A9; /* Целевой цвет */
+  background: linear-gradient(155deg, #348ecf 0%, #449ad8 100%); /* Целевой цвет */
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; /* Плавный переход для непрозрачности */
@@ -110,6 +110,142 @@ body {
   text-transform: uppercase;
 }
 
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(36.1399993896px);
+          backdrop-filter: blur(36.1399993896px);
+  position: absolute;
+  z-index: 20;
+  display: none;
+}
+
+.overlay--show {
+  display: block;
+}
+
+.overlay__inner {
+  width: 100%;
+  height: 100%;
+  padding: 44px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.overlay__row {
+  margin-bottom: -30px;
+}
+
+.overlay__row-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.overlay__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay__nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 15px;
+}
+.overlay__nav-item:last-child {
+  margin-bottom: 0px;
+}
+
+.overlay__nav-link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 135%;
+  color: #fff;
+  font-family: "Druk Wide Cyr";
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.overlay__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay__socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay__socials-item {
+  margin-right: 10px;
+}
+.overlay__socials-item:last-child {
+  margin-right: 0px;
+}
+
+.overlay__socials-link:first-child img {
+  width: 33px;
+  height: 33px;
+}
+
+.overlay__bottom-adress {
+  margin-top: 10px;
+}
+
+.overlay__adress-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay__bottom-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .header {
   position: relative;
   z-index: 1;
@@ -151,6 +287,14 @@ body {
   max-width: 838px;
   padding: 0px 20px;
   min-width: 300px;
+}
+
+.header__nav-item--logo {
+  display: block !important;
+}
+
+.header__nav-item--mob {
+  display: none;
 }
 
 .header__nav-link {
@@ -1010,6 +1154,38 @@ body {
   }
   .header__main-btn:first-child {
     margin-right: 6px;
+  }
+  .header__nav-create,
+  .header__nav-link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .header__nav-item {
+    display: none;
+  }
+  .header__nav-item--mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__nav-item--mob .btn--black {
+    display: block;
+    padding: 10px 12px;
+    font-size: 9px;
+    line-height: 110%;
+    height: 30px;
+    margin-left: 6px;
+  }
+  .header__nav-item--mob .btn--black::before {
+    height: 30px;
+    min-height: auto;
   }
 }
 @media (max-width: 475px) {
