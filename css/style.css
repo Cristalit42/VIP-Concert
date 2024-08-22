@@ -14,7 +14,7 @@ body {
 
 .container {
   max-width: 1190px;
-  padding: 0 15px;
+  padding: 0 10px;
   margin: 0 auto;
   height: 100%;
 }
@@ -115,13 +115,18 @@ body {
   height: 100vh;
   -webkit-backdrop-filter: blur(36.1399993896px);
           backdrop-filter: blur(36.1399993896px);
-  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 20;
   display: none;
 }
 
 .overlay--show {
   display: block;
+  overflow: hidden;
 }
 
 .overlay__inner {
@@ -357,6 +362,10 @@ body {
           transform: scaleX(1);
 }
 
+.header__logo--mob {
+  display: none;
+}
+
 .header__phone-icon {
   margin-top: 3px;
   margin-right: 5px;
@@ -525,6 +534,7 @@ body {
   line-height: 125%;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .header__card-title {
@@ -566,7 +576,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   row-gap: 42px;
-  margin-bottom: 60px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .create__content-item:nth-child(2) .create__item-title {
@@ -667,6 +678,7 @@ body {
 }
 
 .advantages__inner {
+  padding: 0px 15px;
   padding-top: 76px;
   padding-bottom: 165px;
   z-index: 1;
@@ -676,7 +688,7 @@ body {
   content: "";
   background-image: url("../images/advantages/bg.png");
   background-repeat: no-repeat;
-  width: 1440px;
+  width: 100%;
   height: 2048px;
   display: block;
   position: absolute;
@@ -706,6 +718,11 @@ body {
   margin-bottom: 40px;
 }
 
+.advantages__content-item {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
 .advantages__item-wrapper {
   background: linear-gradient(356deg, rgba(26, 25, 25, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), linear-gradient(166deg, rgba(13, 20, 27, 0) 0%, #0d141b 100%);
   -webkit-backdrop-filter: blur(11px);
@@ -714,7 +731,9 @@ body {
   border-radius: 20px;
   padding: 25px;
   padding-right: 0px;
+  width: 100vw;
   max-width: 360px;
+  min-width: 250px;
   height: 206px;
 }
 
@@ -731,6 +750,11 @@ body {
 }
 .advantages__item-text span {
   font-weight: 600;
+}
+
+.advantages__item-img {
+  width: 361px;
+  height: 206px;
 }
 
 .advantages__btn-box {
@@ -1125,12 +1149,58 @@ body {
   margin-left: 8px;
 }
 
+@media (max-width: 1100px) {
+  .header__cards-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 15px 1fr;
+    -ms-grid-columns: 1fr 15px 1fr;
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+    gap: 15px;
+  }
+}
 @media (max-width: 900px) {
   .header__main-title {
     font-size: 46px;
   }
   .header__main-text {
     font-size: 21px;
+  }
+}
+@media (max-width: 800px) {
+  .title {
+    text-align: center;
+    font-size: 40px;
+  }
+  .create__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: hidden;
+    margin-left: 25px;
+  }
+  .create__content-item {
+    margin-right: 10px;
+  }
+  .create__content-item:last-child {
+    margin-right: 0px;
+  }
+  /* Стилизация всей полосы прокрутки */
+  ::-webkit-scrollbar-thumb {
+    background: #666363;
+    border-radius: 80px;
+  }
+  /* Стилизация области, по которой ползунок перемещается (track) */
+  ::-webkit-scrollbar-track {
+    border: 1px solid rgba(153, 153, 153, 0.2);
+    border-radius: 80px;
+  }
+  /* Стилизация кнопок в начале и конце скролл бара (может быть скрыто) */
+  ::-webkit-scrollbar-button {
+    display: none; /* Скрыть кнопки */
   }
 }
 @media (max-width: 700px) {
@@ -1160,11 +1230,13 @@ body {
     font-size: 14px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 610px) {
   .header__nav-item {
     display: none;
   }
   .header__nav-item--mob {
+    -webkit-transform: scale(1.45);
+            transform: scale(1.45);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1187,8 +1259,62 @@ body {
     height: 30px;
     min-height: auto;
   }
+  .header__logo {
+    display: none;
+  }
+  .header__logo--mob {
+    display: block;
+  }
+  .header__cards-list {
+    gap: 5px;
+  }
+  .header__cards-item {
+    padding: 10px 15px 15px 10px;
+    width: 100vw;
+    max-width: 240px;
+    min-width: 148px;
+    margin: 0 auto;
+  }
+  .header__card-text,
+  .header__card-subtitle {
+    font-size: 14px;
+    max-width: 150px;
+  }
+  .header__card-title {
+    font-size: 18px;
+    max-width: 150px;
+  }
+  .header__cards-item:nth-child(1)::before {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .header__cards-item:nth-child(2)::before {
+    width: 52px;
+    height: 54px;
+    background-size: cover;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .header__cards-item:nth-child(3)::before {
+    width: 51px;
+    height: 70px;
+    background-size: cover;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .header__cards-item:nth-child(4)::before {
+    width: 48px;
+    height: 51px;
+    background-size: cover;
+  }
 }
-@media (max-width: 475px) {
+@media (max-width: 505px) {
   .header__main-title {
     font-size: 18px;
   }
@@ -1199,6 +1325,8 @@ body {
   .header::before {
     content: "";
     background-image: url("../images/hero-mob-bg.png");
+    height: 551px;
+    margin-top: 40px;
   }
   .btn,
   .btn--black {
@@ -1210,5 +1338,60 @@ body {
   }
   .btn--black::before {
     height: 46px;
+  }
+  .header__nav-item--mob {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .header__top-inner {
+    padding-top: 34px;
+  }
+  .header__main-inner {
+    padding-bottom: 223px;
+    padding-top: 43px;
+  }
+  .header__main-title {
+    margin-bottom: 17px;
+  }
+  .header__main-text {
+    margin-bottom: 25px;
+  }
+  .header__cards-item {
+    width: 150px;
+  }
+  .header__cards-item:nth-child(2) {
+    padding-right: 0px;
+  }
+  .header__cards-item:nth-child(3) {
+    padding-right: 0px;
+  }
+  .header__card-text,
+  .header__card-subtitle {
+    font-size: 9px;
+  }
+  .header__card-title {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .create .create__btn-box {
+    display: none;
+  }
+  .create__inner {
+    padding-bottom: 18px;
+  }
+  .create__item-title {
+    font-size: 14px;
+  }
+  .create__item-text {
+    font-size: 10px;
+    max-width: 192px;
+  }
+  .create__item-descr {
+    max-width: 239px;
+  }
+  .create__content-img {
+    width: 239px;
   }
 }

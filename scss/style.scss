@@ -21,7 +21,7 @@ body {
 
 .container {
   max-width: 1190px;
-  padding: 0 15px;
+  padding: 0 10px;
   margin: 0 auto;
   height: 100%;
 }
@@ -88,13 +88,18 @@ body {
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(36.13999938964844px);
-  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 20;
   display: none;
 }
 
 .overlay--show {
   display: block;
+  overflow: hidden;
 }
 
 .overlay__inner {
@@ -326,6 +331,10 @@ body {
 
 .header__logo {}
 
+.header__logo--mob {
+  display: none;
+}
+
 .header__phone-icon {
   margin-top: 3px;
   margin-right: 5px;
@@ -403,6 +412,8 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+
 
 .header__cards-item {
   padding: 30px 112px 147px 30px;
@@ -483,6 +494,7 @@ body {
 .header__card-text {
   @include text-style (300, 16px, 125%, rgba(255, 255, 255, 0.7));
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .header__card-title {
@@ -521,8 +533,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   row-gap: 42px;
-  margin-bottom: 60px;
-
+  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .create__content-item {
@@ -622,6 +634,7 @@ body {
 }
 
 .advantages__inner {
+  padding: 0px 15px;
   padding-top: 76px;
   padding-bottom: 165px;
   z-index: 1;
@@ -631,7 +644,7 @@ body {
     content: "";
     background-image: url("../images/advantages/bg.png");
     background-repeat: no-repeat;
-    width: 1440px;
+    width: 100%;
     height: 2048px;
     display: block;
     position: absolute;
@@ -657,7 +670,9 @@ body {
   margin-bottom: 40px;
 }
 
-.advantages__content-item {}
+.advantages__content-item {
+  justify-self: center;
+}
 
 .advantages__item-wrapper {
   background: linear-gradient(356deg, rgba(26, 25, 25, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), linear-gradient(166deg, rgba(13, 20, 27, 0) 0%, #0d141b 100%);
@@ -666,9 +681,13 @@ body {
   border-radius: 20px;
   padding: 25px;
   padding-right: 0px;
+  width: 100vw;
   max-width: 360px;
+  min-width: 250px;
   height: 206px;
+
 }
+
 
 .advantages__item-icon {
   margin-bottom: 15px;
@@ -683,7 +702,10 @@ body {
   }
 }
 
-.advantages__item-img {}
+.advantages__item-img {
+  width: 361px;
+  height: 206px;
+}
 
 .advantages__btn-box {
   max-width: 680px;
@@ -1091,6 +1113,20 @@ body {
 
 //FOOTER END
 //RESPONSIVE START
+
+//1100px start
+
+@media (max-width:1100px) {
+
+  .header__cards-list {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+//1100px end
+
 //900px start
 @media (max-width:900px) {
   .header__main-title {
@@ -1104,6 +1140,58 @@ body {
   //900px end
 
 }
+
+//800px start
+@media (max-width: 800px) {
+
+  .title {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .create__content {
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    margin-left: 25px;
+  }
+
+  .create__content-item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+/* Стилизация всей полосы прокрутки */
+::-webkit-scrollbar {
+  // width: 2px; /* Ширина скролл бара */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666363;
+  border-radius: 80px;
+}
+
+/* Стилизация области, по которой ползунок перемещается (track) */
+::-webkit-scrollbar-track {
+  border: 1px solid rgba(153, 153, 153, 0.2);
+  border-radius: 80px;
+
+}
+
+/* Стилизация кнопок в начале и конце скролл бара (может быть скрыто) */
+::-webkit-scrollbar-button {
+  display: none; /* Скрыть кнопки */
+}
+
+  //800px end
+}
+
+//750px start
+
+
+//750px end
 
 //700px start
 @media (max-width:700px) {
@@ -1146,9 +1234,9 @@ body {
   //700px end
 }
 
-//600px start
+//610px start
 
-@media (max-width:600px) {
+@media (max-width:610px) {
 
   .header__nav-item {
     display: none;
@@ -1156,6 +1244,7 @@ body {
 
 
   .header__nav-item--mob {
+    transform: scale(1.45);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1175,13 +1264,75 @@ body {
     }
   }
 
-  //600px end
+  .header__logo {
+    display: none;
+  }
+
+  .header__logo--mob {
+    display: block;
+  }
+
+  .header__cards-list {
+    gap: 5px;
+  }
+
+  .header__cards-item {
+    padding: 10px 15px 15px 10px;
+    width: 100vw;
+    max-width: 240px;
+    min-width: 148px;
+    margin: 0 auto;
+  }
+
+
+  .header__card-text,
+  .header__card-subtitle {
+    font-size: 14px;
+    max-width: 150px;
+  }
+
+  .header__card-title {
+    font-size: 18px;
+    max-width: 150px;
+  }
+
+  .header__cards-item:nth-child(1)::before {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header__cards-item:nth-child(2)::before {
+    width: 52px;
+    height: 54px;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header__cards-item:nth-child(3)::before {
+    width: 51px;
+    height: 70px;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header__cards-item:nth-child(4)::before {
+    width: 48px;
+    height: 51px;
+    background-size: cover;
+  }
+
+  //610px end
 }
 
 
 
-//475px start
-@media (max-width: 475px) {
+//505px start
+@media (max-width: 505px) {
   .header__main-title {
     font-size: 18px;
   }
@@ -1196,6 +1347,8 @@ body {
     &::before {
       content: "";
       background-image: url("../images/hero-mob-bg.png");
+      height: 551px;
+      margin-top: 40px;
     }
   }
 
@@ -1215,7 +1368,81 @@ body {
     }
   }
 
-  //475px end
+  .header__nav-item--mob {
+    transform: scale(1);
+  }
+
+  .header__top-inner {
+    padding-top: 34px;
+  }
+
+
+  .header__main-inner {
+    padding-bottom: 223px;
+    padding-top: 43px;
+  }
+
+  .header__main-title {
+    margin-bottom: 17px;
+  }
+
+  .header__main-text {
+    margin-bottom: 25px;
+  }
+
+  .header__cards-item {
+    width: 150px;
+
+    &:nth-child(2) {
+      padding-right: 0px;
+    }
+
+    &:nth-child(3) {
+      padding-right: 0px;
+    }
+  }
+
+  .header__card-text,
+  .header__card-subtitle {
+    font-size: 9px;
+  }
+
+  .header__card-title {
+    font-size: 14px;
+  }
+
+  .title{
+    font-size: 18px;
+  }
+
+  .create{
+    .create__btn-box{
+      display: none;
+    }
+  }
+
+  .create__inner{
+    padding-bottom: 18px;
+  }
+
+  .create__item-title{
+    font-size: 14px;
+  }
+
+  .create__item-text{
+    font-size: 10px;
+    max-width: 192px;
+  }
+
+  .create__item-descr{
+    max-width: 239px;
+  }
+
+  .create__content-img{
+    width: 239px;
+  }
+
+  //505px end
 }
 
 

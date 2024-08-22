@@ -1,5 +1,12 @@
 $(function () {
 
+  $('.header__nav-link, .overlay__btn-x').on('click', function (e) {
+    e.preventDefault()
+    $('.overlay').toggleClass('overlay--show')
+
+
+  })
+
   //CAROUSEL START
   $('.advantages__carousel').slick({
     slidesToShow: 3,
@@ -34,9 +41,7 @@ $(function () {
 
 
   //SMOOTH SCROLL END
-  //GALLERY START
-  
+  //MENU START
 
-
-  //GALLERY END
+  //MENU END
 });
