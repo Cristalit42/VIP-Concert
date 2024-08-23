@@ -333,6 +333,8 @@ body {
 
 .header__logo--mob {
   display: none;
+  width: 88px;
+  height: 28px;
 }
 
 .header__phone-icon {
@@ -414,7 +416,6 @@ body {
 }
 
 
-
 .header__cards-item {
   padding: 30px 112px 147px 30px;
   backdrop-filter: blur(11px);
@@ -446,11 +447,11 @@ body {
       content: "";
       background-image: url("../images/hero-cards/star.svg");
       background-repeat: no-repeat;
-      width: 190px;
+      width: 173px;
       height: 200px;
       display: block;
       position: absolute;
-      bottom: 0px;
+      bottom: -20px;
       right: 0px;
     }
   }
@@ -463,7 +464,7 @@ body {
       content: "";
       background-image: url("../images/hero-cards/planet.svg");
       background-repeat: no-repeat;
-      width: 139px;
+      width: 143px;
       height: 175px;
       display: block;
       position: absolute;
@@ -1202,7 +1203,7 @@ body {
 
   .header__main-text {
     font-size: 16px;
-    max-width: 380px;
+    max-width: 381px;
   }
 
   .header__main-btn {
@@ -1218,6 +1219,7 @@ body {
 
   .header__main-btns {
     padding: 0px 20px;
+    justify-content: center;
   }
 
   .header__main-btn {
@@ -1278,9 +1280,10 @@ body {
 
   .header__cards-item {
     padding: 10px 15px 15px 10px;
-    width: 100vw;
-    max-width: 240px;
-    min-width: 148px;
+    // width: 100vw;
+    width: 100%;
+    // max-width: 240px;
+    // min-width: 148px;
     margin: 0 auto;
   }
 
@@ -1291,13 +1294,18 @@ body {
     max-width: 150px;
   }
 
+  .header__card-text{
+    margin-bottom: 1px;
+  }
+
   .header__card-title {
     font-size: 18px;
     max-width: 150px;
+    margin-bottom: 0px;
   }
 
   .header__cards-item:nth-child(1)::before {
-    width: 60px;
+    width: 67px;
     height: 60px;
     background-size: cover;
     top: 50%;
@@ -1305,24 +1313,24 @@ body {
   }
 
   .header__cards-item:nth-child(2)::before {
-    width: 52px;
-    height: 54px;
+    width: 48px;
+    height: 50px;
     background-size: cover;
     top: 50%;
     transform: translateY(-50%);
   }
 
   .header__cards-item:nth-child(3)::before {
-    width: 51px;
-    height: 70px;
+    width: 43px;
+    height: 51px;
     background-size: cover;
     top: 50%;
     transform: translateY(-50%);
   }
 
   .header__cards-item:nth-child(4)::before {
-    width: 48px;
-    height: 51px;
+    width: 52px;
+    height: 56px;
     background-size: cover;
   }
 
@@ -1334,7 +1342,8 @@ body {
 //505px start
 @media (max-width: 505px) {
   .header__main-title {
-    font-size: 18px;
+    font-size: 20px;
+    letter-spacing: -0.06em;
   }
 
   .header__main-text {
@@ -1347,6 +1356,8 @@ body {
     &::before {
       content: "";
       background-image: url("../images/hero-mob-bg.png");
+      background-repeat: no-repeat;
+      background-position: center;
       height: 551px;
       margin-top: 40px;
     }
@@ -1390,8 +1401,9 @@ body {
     margin-bottom: 25px;
   }
 
+
   .header__cards-item {
-    width: 150px;
+    border-radius: 11px;
 
     &:nth-child(2) {
       padding-right: 0px;
@@ -1409,6 +1421,21 @@ body {
 
   .header__card-title {
     font-size: 14px;
+  }
+
+  .header__main-btns{
+    max-width: 244px;
+  }
+
+  .header__main-btn{
+    font-size: 9px;
+    &:first-child{
+      max-width: 111px;
+    }
+
+    &:last-child{
+      max-width: 127px;
+    }
   }
 
   .title{
@@ -1442,8 +1469,21 @@ body {
     width: 239px;
   }
 
+  .advantages__inner{
+    &::before{
+      background-image: url("../images/advantages/bg-mob.png");
+    }
+  }
+
   //505px end
 }
 
+//350px start
+@media (max-width:350px){
+  .header__cards-item{
+    max-width: 150px;
+  }
+  //350px end
+}
 
 //RESPONSIVE END
