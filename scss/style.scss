@@ -27,7 +27,7 @@ body {
 }
 
 .btn {
-  @include text-style (300, 16px, 110%, #fff);
+  @include text-style (500, 16px, 110%, #fff);
   text-align: center;
   padding: 35px;
   background: linear-gradient(157deg, #086db6 0%, #449ad8 100%);
@@ -37,7 +37,7 @@ body {
 }
 
 .btn--black {
-  @include text-style (300, 16px, 110%, #fff);
+  @include text-style (500, 16px, 110%, #fff);
   border-radius: 110px;
   padding: 35px;
   text-align: center;
@@ -292,6 +292,10 @@ body {
   //   font-weight: 700;
   // }
 
+}
+
+.header__nav-link--burger {
+  font-weight: 500;
 }
 
 .header__nav-create {
@@ -610,6 +614,7 @@ body {
     content: "";
     background-image: url("../images/icons/arrow-icon.svg");
     background-repeat: no-repeat;
+    background-size: cover;
     width: 59px;
     height: 59px;
     display: block;
@@ -632,6 +637,7 @@ body {
 
 .container--second {
   max-width: 1160px !important;
+
 }
 
 .advantages__inner {
@@ -1164,27 +1170,29 @@ body {
       margin-right: 0px;
     }
   }
-/* Стилизация всей полосы прокрутки */
-::-webkit-scrollbar {
-  // width: 2px; /* Ширина скролл бара */
-}
 
-::-webkit-scrollbar-thumb {
-  background: #666363;
-  border-radius: 80px;
-}
+  /* Стилизация всей полосы прокрутки */
+  ::-webkit-scrollbar {
+    // width: 2px; /* Ширина скролл бара */
+  }
 
-/* Стилизация области, по которой ползунок перемещается (track) */
-::-webkit-scrollbar-track {
-  border: 1px solid rgba(153, 153, 153, 0.2);
-  border-radius: 80px;
+  ::-webkit-scrollbar-thumb {
+    background: #666363;
+    border-radius: 80px;
+  }
 
-}
+  /* Стилизация области, по которой ползунок перемещается (track) */
+  ::-webkit-scrollbar-track {
+    border: 1px solid rgba(153, 153, 153, 0.2);
+    border-radius: 80px;
 
-/* Стилизация кнопок в начале и конце скролл бара (может быть скрыто) */
-::-webkit-scrollbar-button {
-  display: none; /* Скрыть кнопки */
-}
+  }
+
+  /* Стилизация кнопок в начале и конце скролл бара (может быть скрыто) */
+  ::-webkit-scrollbar-button {
+    display: none;
+    /* Скрыть кнопки */
+  }
 
   //800px end
 }
@@ -1294,7 +1302,7 @@ body {
     max-width: 150px;
   }
 
-  .header__card-text{
+  .header__card-text {
     margin-bottom: 1px;
   }
 
@@ -1423,55 +1431,148 @@ body {
     font-size: 14px;
   }
 
-  .header__main-btns{
+  .header__main-btns {
     max-width: 244px;
   }
 
-  .header__main-btn{
+  .header__main-btn {
     font-size: 9px;
-    &:first-child{
+
+    &:first-child {
       max-width: 111px;
     }
 
-    &:last-child{
+    &:last-child {
       max-width: 127px;
     }
   }
 
-  .title{
+  .title {
     font-size: 18px;
   }
 
-  .create{
-    .create__btn-box{
+  .create {
+    .create__btn-box {
       display: none;
     }
   }
 
-  .create__inner{
+  .create__inner {
     padding-bottom: 18px;
   }
 
-  .create__item-title{
+  .create__item-title {
     font-size: 14px;
   }
 
-  .create__item-text{
+  .create__item-text {
     font-size: 10px;
     max-width: 192px;
   }
 
-  .create__item-descr{
+  .create__item-descr {
     max-width: 239px;
   }
 
-  .create__content-img{
+  .create__content-img {
     width: 239px;
   }
 
-  .advantages__inner{
-    &::before{
+  .advantages__inner {
+    padding-top: 40px;
+    margin: 0px 10px;
+
+    &::before {
       background-image: url("../images/advantages/bg-mob.png");
+      background-position: center 0;
+    }
+  }
+
+  .advantages__title {
+    max-width: 236px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+  }
+
+  .advantages__content-item {
+    width: 100%;
+  }
+
+  .advantages__item-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .advantages__item-icon {
+    order: 1;
+  }
+
+  .advantages__content {
+    row-gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .advantages__content-item {
+    &:nth-child(3) {
+      display: none;
+    }
+
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+
+  .advantages__item-text {
+    font-size: 11px;
+    max-width: 182px;
+
+  }
+
+  .advantages__item-icon {
+    width: 23px;
+    height: 23px;
+    margin-bottom: 0px;
+  }
+
+  .advantages__content-item {
+
+    &:nth-child(5) {
+      order: 6;
+    }
+
+    &:nth-child(6) {
+      order: 5;
+
+      .advantages__item-text {
+        max-width: 194px;
+
+      }
+    }
+  }
+
+  .br--none {
+    display: none;
+  }
+
+  .weight--mobile {
+    font-weight: 600px;
+  }
+
+  .advantages__btn-box{
+    max-width: 360px;
+    
+  }
+
+  .create__btn {
+    &::before{
+      width: 27px;
+      height: 27px;
     }
   }
 
@@ -1479,10 +1580,11 @@ body {
 }
 
 //350px start
-@media (max-width:350px){
-  .header__cards-item{
+@media (max-width:350px) {
+  .header__cards-item {
     max-width: 150px;
   }
+
   //350px end
 }
 
