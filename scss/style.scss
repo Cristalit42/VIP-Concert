@@ -1809,7 +1809,10 @@ body {
     }
 
     &:nth-child(4) {
-      bottom: -3px;
+      &::before{
+
+        bottom: -3px;
+      }
     }
   }
 
