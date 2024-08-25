@@ -1391,6 +1391,12 @@ body {
   .footer__mobile-mail {
     margin-bottom: 10px !important;
   }
+  .footer__row-item:nth-child(2) {
+    margin-right: 100px;
+  }
+  .footer__row-item:last-child {
+    display: none;
+  }
 }
 @media (max-width: 750px) {
   .header__main-title {
@@ -1830,6 +1836,9 @@ body {
   .footer__row-item {
     margin-right: 20px;
     white-space: nowrap;
+  }
+  .footer__row-item:nth-child(2) {
+    margin-right: 46px;
   }
   .footer__row-item:last-child {
     margin-right: 0px;

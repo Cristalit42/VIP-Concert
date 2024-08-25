@@ -1375,6 +1375,15 @@ body {
     margin-bottom: 10px !important;
   }
 
+  .footer__row-item{
+    &:nth-child(2){
+      margin-right: 100px;
+    }
+    &:last-child{
+      display: none;
+    }
+  }
+
   //800px end
 }
 
@@ -1973,6 +1982,10 @@ body {
     margin-right: 20px;
     white-space: nowrap;
 
+    &:nth-child(2){
+      margin-right: 46px;
+    }
+
     &:last-child {
       margin-right: 0px;
     }
@@ -1982,7 +1995,7 @@ body {
     padding-bottom: 60px;
   }
 
-
+  
 
   //505px end
 }
