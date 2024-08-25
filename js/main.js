@@ -25,9 +25,9 @@ $('.advantages__carousel').slick({
   variableWidth: true, // Отключаем variableWidth
   responsive: [
     {
-      breakpoint: 505,
+      breakpoint: 768,
       settings: {
-        slidesToShow: 1, // Уменьшить количество слайдов
+        slidesToShow: 3, // Больше слайдов на мобильных устройствах
         speed: 5000 // Оптимизировать скорость
       }
     }
