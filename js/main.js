@@ -3,8 +3,10 @@ $(function () {
   $('.header__nav-link--burger, .overlay__btn-x').on('click', function (e) {
     e.preventDefault()
     $('.overlay').toggleClass('overlay--show')
+  })
 
-
+  $('.overlay__nav-link').on('click', function () {
+    $('.overlay').toggleClass('overlay--show')
   })
 
   //CAROUSEL START
@@ -42,7 +44,7 @@ $('.advantages__carousel').slick({
     $('body,html').animate({ scrollTop: top }, 800)
   });
 
-  $(".header__nav-item a, .footer__nav-link, .btn, .btn--black").on("click", function (e) {
+  $(".header__nav-item a, .footer__nav-link, .btn, .btn--black, .overlay__nav-link").on("click", function (e) {
     e.preventDefault()
     var id = $(this).attr('href'),
       top = $(id).offset().top - 50
