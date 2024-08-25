@@ -1431,7 +1431,7 @@ body {
   }
 }
 @media (max-width: 610px) {
-  .header__nav-item {
+  .header__nav-item, .header__nav-item--mail {
     display: none;
   }
   .header__nav-item--mob {
