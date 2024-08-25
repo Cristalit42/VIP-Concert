@@ -1,6 +1,6 @@
 $(function () {
 
-  $('.header__nav-link, .overlay__btn-x').on('click', function (e) {
+  $('.header__nav-link--burger, .overlay__btn-x').on('click', function (e) {
     e.preventDefault()
     $('.overlay').toggleClass('overlay--show')
 
@@ -32,7 +32,7 @@ $(function () {
     $('body,html').animate({ scrollTop: top }, 800)
   });
 
-  $(".header__nav-link, .footer__row-item a, .btn, .btn--black").on("click", function (e) {
+  $(".header__nav-item a, .footer__nav-link, .btn, .btn--black").on("click", function (e) {
     e.preventDefault()
     var id = $(this).attr('href'),
       top = $(id).offset().top - 50
