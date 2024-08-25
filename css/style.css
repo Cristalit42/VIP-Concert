@@ -1366,9 +1366,12 @@ body {
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .footer__socials .footer__social-link {
+    margin-right: 10px;
   }
   .footer__item-title {
     font-weight: 500;
@@ -1385,7 +1388,7 @@ body {
     font-size: 14px;
     line-height: 90%;
     color: #fff;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
   .footer__nav-link:last-child {
     margin-bottom: 0px;
@@ -1414,6 +1417,9 @@ body {
   }
   .footer__mobile-mail span {
     margin-top: 4px;
+  }
+  .footer__row-item {
+    max-height: 120px;
   }
   .footer__row-item:nth-child(2) {
     margin-right: 72px;
