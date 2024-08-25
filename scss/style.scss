@@ -756,6 +756,10 @@ body {
 
 .advantages__carousel-img {}
 
+.advantages__carousel-img--mobile{
+  display: none !important;
+}
+
 //advantages end
 //gallery start
 
@@ -1360,8 +1364,12 @@ body {
 
   .footer__item-title {
     @include text-style (500, 16px, 90%, rgba(255, 255, 255, 0.4));
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 
+  }
+
+  .footer__contacts-item--row{
+    line-height: 90%;
   }
 
   .footer__nav-link {
@@ -1396,11 +1404,16 @@ body {
   .footer__mobile-mail {
     font-weight: 500;
     margin-bottom: 10px !important;
+    line-height: 90%;
+
+    span{
+      margin-top: 4px;
+    }
   }
 
   .footer__row-item {
     &:nth-child(2) {
-      margin-right: 100px;
+      margin-right: 72px;
     }
 
     &:last-child {
@@ -1420,6 +1433,15 @@ body {
     iframe {
       border-radius: 0px;
     }
+  }
+
+  .footer__row-link--dev {
+    margin-top: 14px;
+    font-size: 14px !important;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   //800px end
@@ -1944,9 +1966,6 @@ body {
     }
   }
 
-  .advantages__carousel-img {
-    height: 52px;
-  }
 
   .advantages__inner {
     &::before {
@@ -2033,7 +2052,7 @@ body {
     white-space: nowrap;
 
     &:nth-child(2) {
-      margin-right: 46px;
+      margin-right:20px;
     }
 
     &:last-child {
@@ -2045,7 +2064,13 @@ body {
     padding-bottom: 60px;
   }
 
+  .advantages__carousel-img{
+    display: none !important;
+  } 
 
+  .advantages__carousel-img--mobile{
+    display: block !important;
+  }
 
   //505px end
 }

@@ -8,19 +8,29 @@ $(function () {
   })
 
   //CAROUSEL START
-  $('.advantages__carousel').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 0,
-    infinite: true,
-    cssEase: 'linear',
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    variableWidth: true
-  });
+$('.advantages__carousel').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 5000,
+  autoplaySpeed: 0,
+  infinite: true,
+  cssEase: 'linear',
+  arrows: false,
+  dots: false,
+  pauseOnHover: false,
+  swipe: false,
+  variableWidth: true, // Отключаем variableWidth
+  responsive: [
+    {
+      breakpoint: 505,
+      settings: {
+        slidesToShow: 1, // Уменьшить количество слайдов
+        speed: 5000 // Оптимизировать скорость
+      }
+    }
+  ]
+});
 
   //CAROUSEL END
   //SMOOTH SCROLL START
