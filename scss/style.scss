@@ -73,7 +73,7 @@ body {
 
 .title {
   @include text-style (700, 46px, 154%, #fff);
-  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50%, #B9B9B9 100%));
+  // @include text-gradient(linear-gradient(90deg, #999 0%, #fff 45.71%, #999 100%));
 
   font-family: $sf;
   letter-spacing: -0.02em;
@@ -534,7 +534,8 @@ body {
 }
 
 .create__title {
-  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%));
+  @include text-gradient(linear-gradient(90deg, #999 0%, #fff 45.71%, #999 100%));
+  background-size: 500px;
   margin-bottom: 40px;
 }
 
@@ -582,8 +583,6 @@ body {
   padding: 32px;
   padding-top: 64px;
   max-width: 360px
-
-
 }
 
 .create__item-title {
@@ -672,8 +671,8 @@ body {
 .advantages__title {
   max-width: 700px;
   margin-bottom: 36px;
-  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #CCCCCC 100%));
-
+  @include text-gradient(linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%));
+  background-size: 700px;
 }
 
 .advantages__content {
@@ -760,7 +759,7 @@ body {
 
 .advantages__carousel-img {}
 
-.advantages__carousel-img--mobile{
+.advantages__carousel-img--mobile {
   display: none !important;
 }
 
@@ -796,8 +795,8 @@ body {
 
 .gallery__title {
   margin-bottom: 56px;
-  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%));
-
+  @include text-gradient(linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%));
+  background-size: 700px;
 }
 
 .gallery__content {
@@ -901,8 +900,8 @@ body {
 
 .trust__title {
   margin-bottom: 40px;
-  @include text-gradient(linear-gradient(90deg, #BEBEBE 0%, #fff 50.86%, #BCBCBC 100%));
-
+  @include text-gradient(linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%));
+  background-size: 590px;
 }
 
 .trust__content {
@@ -981,8 +980,8 @@ body {
 
 .footer__contacts-title {
   margin-bottom: 48px;
-  @include text-gradient(linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%));
-
+  @include text-gradient(linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%));
+  background-size: 387px;
 }
 
 .footer__contacts-list {}
@@ -1303,8 +1302,8 @@ body {
       order: 2;
     }
 
-    &:nth-child(2){
-      span{
+    &:nth-child(2) {
+      span {
         margin-top: 4px;
       }
     }
@@ -1339,7 +1338,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    &::after{
+    &::after {
       display: none;
     }
 
@@ -1365,7 +1364,7 @@ body {
     align-items: center;
     flex-direction: row-reverse;
 
-    .footer__social-link{
+    .footer__social-link {
       margin-right: 10px;
     }
 
@@ -1377,7 +1376,7 @@ body {
 
   }
 
-  .footer__contacts-item--row{
+  .footer__contacts-item--row {
     line-height: 90%;
   }
 
@@ -1416,7 +1415,7 @@ body {
     margin-bottom: 10px !important;
     line-height: 90%;
 
-    span{
+    span {
       margin-top: 4px;
     }
   }
@@ -1705,8 +1704,8 @@ body {
     height: 77px;
   }
 
-  .footer{
-    &::before{
+  .footer {
+    &::before {
       background-image: url("../images/footer-bg-mob.png");
       height: 646px;
     }
@@ -1809,7 +1808,7 @@ body {
     }
 
     &:nth-child(4) {
-      &::before{
+      &::before {
 
         bottom: -3px;
       }
@@ -1848,6 +1847,7 @@ body {
 
   .create__title {
     margin-bottom: 27px;
+    background-size: contain;
   }
 
   .create {
@@ -1870,8 +1870,14 @@ body {
     max-width: 192px;
   }
 
+  .create__content-item{
+    height: 237px;
+
+  }
+
   .create__item-descr {
     max-width: 239px;
+    height: 144px;
     padding: 51px 26px 16px 20px;
   }
 
@@ -1896,6 +1902,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 26px;
+    background-size: contain;
   }
 
   .advantages__content-item {
@@ -1990,6 +1997,9 @@ body {
     }
   }
 
+  .gallery__title{
+    background-size: contain;
+  }
 
   .gallery__btn-box {
     max-width: 300px;
@@ -2010,6 +2020,7 @@ body {
 
   .trust__title {
     margin-bottom: 26px;
+    background-size: contain;
   }
 
   .footer__contacts-item {
@@ -2019,7 +2030,7 @@ body {
       font-size: 11px !important;
     }
 
-    a{
+    a {
       font-size: 11px;
     }
   }
@@ -2070,7 +2081,7 @@ body {
     white-space: nowrap;
 
     &:nth-child(2) {
-      margin-right:20px;
+      margin-right: 20px;
     }
 
     &:last-child {
@@ -2082,11 +2093,11 @@ body {
     padding-bottom: 60px;
   }
 
-  .advantages__carousel-img{
+  .advantages__carousel-img {
     display: none !important;
-  } 
+  }
 
-  .advantages__carousel-img--mobile{
+  .advantages__carousel-img--mobile {
     display: block !important;
   }
 

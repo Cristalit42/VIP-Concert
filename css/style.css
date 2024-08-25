@@ -100,11 +100,6 @@ body {
   font-size: 46px;
   line-height: 154%;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50%, #fff), to(#B9B9B9));
-  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50%, #B9B9B9 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-family: "Druk Wide Cyr";
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -573,11 +568,12 @@ body {
 }
 
 .create__title {
-  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50.86%, #fff), to(#B9B9B9));
-  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#999), color-stop(45.71%, #fff), to(#999));
+  background: linear-gradient(90deg, #999 0%, #fff 45.71%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 500px;
   margin-bottom: 40px;
 }
 
@@ -714,11 +710,12 @@ body {
 .advantages__title {
   max-width: 700px;
   margin-bottom: 36px;
-  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50.86%, #fff), to(#CCCCCC));
-  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #CCCCCC 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#999), color-stop(50.86%, #fff), to(#999));
+  background: linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 700px;
 }
 
 .advantages__content {
@@ -829,11 +826,12 @@ body {
 
 .gallery__title {
   margin-bottom: 56px;
-  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50.86%, #fff), to(#B9B9B9));
-  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#999), color-stop(50.86%, #fff), to(#999));
+  background: linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 700px;
 }
 
 .gallery__content {
@@ -937,11 +935,12 @@ body {
 
 .trust__title {
   margin-bottom: 40px;
-  background: -webkit-gradient(linear, left top, right top, from(#BEBEBE), color-stop(50.86%, #fff), to(#BCBCBC));
-  background: linear-gradient(90deg, #BEBEBE 0%, #fff 50.86%, #BCBCBC 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#999), color-stop(50.86%, #fff), to(#999));
+  background: linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 590px;
 }
 
 .trust__content {
@@ -1022,11 +1021,12 @@ body {
 
 .footer__contacts-title {
   margin-bottom: 48px;
-  background: -webkit-gradient(linear, left top, right top, from(#BDBDBD), color-stop(50.86%, #fff), to(#B9B9B9));
-  background: linear-gradient(90deg, #BDBDBD 0%, #fff 50.86%, #B9B9B9 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#999), color-stop(50.86%, #fff), to(#999));
+  background: linear-gradient(90deg, #999 0%, #fff 50.86%, #999 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 387px;
 }
 
 .footer__contacts-item {
@@ -1727,6 +1727,7 @@ body {
   }
   .create__title {
     margin-bottom: 27px;
+    background-size: contain;
   }
   .create .create__btn-box {
     display: none;
@@ -1742,8 +1743,12 @@ body {
     font-size: 10px;
     max-width: 192px;
   }
+  .create__content-item {
+    height: 237px;
+  }
   .create__item-descr {
     max-width: 239px;
+    height: 144px;
     padding: 51px 26px 16px 20px;
   }
   .create__content-img {
@@ -1763,6 +1768,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 26px;
+    background-size: contain;
   }
   .advantages__content-item {
     width: 100%;
@@ -1840,6 +1846,9 @@ body {
   .advantages__carousel::after {
     bottom: -10px;
   }
+  .gallery__title {
+    background-size: contain;
+  }
   .gallery__btn-box {
     max-width: 300px;
     margin-top: 20px;
@@ -1855,6 +1864,7 @@ body {
   }
   .trust__title {
     margin-bottom: 26px;
+    background-size: contain;
   }
   .footer__contacts-item {
     font-size: 8px;
