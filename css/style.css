@@ -1335,7 +1335,7 @@ body {
     font-size: 14px;
   }
   .footer__row-link--mobile img {
-    width: 88px;
+    width: 107px;
     margin-bottom: 10px;
   }
   .footer__row-item {
@@ -1393,6 +1393,9 @@ body {
   .footer__contacts-list {
     padding: 0px 30px;
   }
+  .footer__mobile-mail {
+    margin-bottom: 10px !important;
+  }
 }
 @media (max-width: 750px) {
   .header__main-title {
@@ -1431,7 +1434,8 @@ body {
   }
 }
 @media (max-width: 610px) {
-  .header__nav-item, .header__nav-item--mail {
+  .header__nav-item,
+  .header__nav-item--mail {
     display: none;
   }
   .header__nav-item--mob {
@@ -1541,7 +1545,7 @@ body {
     margin: 0 auto;
   }
   .trust__inner {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
   .trust__content-item:nth-child(1) img {
     width: 118px;
@@ -1575,7 +1579,7 @@ body {
     height: 205px;
   }
   .footer__content {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }
 @media (max-width: 505px) {
@@ -1589,7 +1593,7 @@ body {
   }
   .header::before {
     content: "";
-    background-image: url("../images/hero-mob-bg.png");
+    background-image: url("../images/hero-mob-bg2.png");
     background-repeat: no-repeat;
     background-position: center;
     height: 551px;
@@ -1682,7 +1686,7 @@ body {
     width: 239px;
   }
   .advantages__inner {
-    padding-top: 40px;
+    padding-top: 60px;
     margin: 0px 10px;
   }
   .advantages__inner::before {
@@ -1797,20 +1801,27 @@ body {
     font-size: 13px !important;
   }
   .footer__item-title {
-    font-size: 8px;
-  }
-  .footer__nav-link {
     font-size: 9px;
   }
   .footer__row-link--mobile {
-    font-size: 8px;
+    font-size: 9px;
   }
   .footer__row-link--mobile span {
-    font-size: 9px !important;
+    font-size: 11px !important;
+  }
+  .footer__nav-link {
+    font-size: 11px;
   }
   .footer__social-link svg {
     width: 26px;
     height: 26px;
+  }
+  .footer__row-link--dev {
+    margin-top: 14px;
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
   .footer__row-link {
     font-size: 8px;
@@ -1821,6 +1832,9 @@ body {
   }
   .footer__row-item:last-child {
     margin-right: 0px;
+  }
+  .gallery__inner {
+    padding-bottom: 60px;
   }
 }
 @media (max-width: 350px) {

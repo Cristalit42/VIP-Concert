@@ -1319,8 +1319,7 @@ body {
     }
 
     img {
-      width: 88px;
-
+      width: 107px;
       margin-bottom: 10px;
     }
   }
@@ -1371,6 +1370,10 @@ body {
 
   .footer__contacts-list {
     padding: 0px 30px;
+  }
+
+  .footer__mobile-mail {
+    margin-bottom: 10px !important;
   }
 
   //800px end
@@ -1430,7 +1433,8 @@ body {
 
 @media (max-width:610px) {
 
-  .header__nav-item, .header__nav-item--mail {
+  .header__nav-item,
+  .header__nav-item--mail {
     display: none;
   }
 
@@ -1555,7 +1559,7 @@ body {
   }
 
   .trust__inner {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 
   .trust__content-item {
@@ -1625,8 +1629,8 @@ body {
     height: 205px;
   }
 
-  .footer__content{
-    margin-bottom: 20px;
+  .footer__content {
+    margin-bottom: 25px;
   }
 
   //610px end
@@ -1650,7 +1654,7 @@ body {
   .header {
     &::before {
       content: "";
-      background-image: url("../images/hero-mob-bg.png");
+      background-image: url("../images/hero-mob-bg2.png");
       background-repeat: no-repeat;
       background-position: center;
       height: 551px;
@@ -1775,7 +1779,7 @@ body {
   }
 
   .advantages__inner {
-    padding-top: 40px;
+    padding-top: 60px;
     margin: 0px 10px;
 
     &::before {
@@ -1920,20 +1924,23 @@ body {
 
 
   .footer__item-title {
-    font-size: 8px;
-  }
-
-  .footer__nav-link {
     font-size: 9px;
   }
 
+
+
   .footer__row-link--mobile {
-    font-size: 8px;
+    font-size: 9px;
+
     span {
-      font-size: 9px !important;
+      font-size: 11px !important;
     }
 
 
+  }
+
+  .footer__nav-link {
+    font-size: 11px;
   }
 
   .footer__social-link {
@@ -1943,18 +1950,32 @@ body {
     }
   }
 
-  .footer__row-link{
+  .footer__row-link--dev{
+    margin-top: 14px;
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .footer__row-link {
     font-size: 8px;
   }
 
-  .footer__row-item{
+  .footer__row-item {
     margin-right: 20px;
     white-space: nowrap;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0px;
     }
   }
+
+  .gallery__inner {
+    padding-bottom: 60px;
+  }
+
+
 
   //505px end
 }
