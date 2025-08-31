@@ -150,7 +150,8 @@ body {
   }
 }
 
-.overlay__nav-link {
+.overlay__nav-link,
+.overlay__page-link {
   @include text-style (700, 22px, 135%, #fff);
   font-family: $sf;
   letter-spacing: -0.02em;
@@ -212,6 +213,8 @@ body {
 //HEADER START
 //header__top start
 
+
+
 .header {
   position: relative;
   z-index: 1;
@@ -227,6 +230,12 @@ body {
     left: 50%;
     z-index: -1;
     transform: translate(-50%);
+  }
+}
+
+.gallery__header {
+  &::before {
+    display: none;
   }
 }
 
@@ -302,7 +311,8 @@ body {
   font-weight: 500;
 }
 
-.header__nav-create {
+.header__nav-create,
+.header__page-link {
   @include text-style (300, 16px, 125%, #fff);
   transition: all .3s;
 
@@ -792,6 +802,34 @@ body {
   z-index: 1;
   padding-bottom: 150px;
 }
+
+.gallery__inner-page {
+  margin-top: 150px;
+  padding-top: 75px;
+  margin-bottom: 100px;
+  z-index: 45;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../images/advantages/bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    max-width: 1440px;
+    min-width: 250px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -100;
+    border-radius: 30px;
+  }
+}
+
+
 
 .gallery__title {
   margin-bottom: 56px;
@@ -1630,6 +1668,11 @@ body {
     }
   }
 
+
+  .gallery__content-item--gallery {
+    display: block !important;
+  }
+
   .trust__content {
     row-gap: 5px;
     column-gap: 3px;
@@ -1870,7 +1913,7 @@ body {
     max-width: 192px;
   }
 
-  .create__content-item{
+  .create__content-item {
     height: 237px;
 
   }
@@ -1997,7 +2040,7 @@ body {
     }
   }
 
-  .gallery__title{
+  .gallery__title {
     background-size: contain;
   }
 
@@ -2091,6 +2134,11 @@ body {
 
   .gallery__inner {
     padding-bottom: 60px;
+  }
+
+  .gallery__inner-page {
+    padding-top: 60px;
+
   }
 
   .advantages__carousel-img {
